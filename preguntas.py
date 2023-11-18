@@ -47,7 +47,12 @@ def pregunta_02():
 
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 12345. Use 300 patrones para la muestra de prueba.
-    (X_train, X_test, y_train, y_test,) = train_test_split(X,y,test_size=300,random_state=12345)
+    (X_train, X_test, y_train, y_test,) = train_test_split(
+        X,
+        y,
+        test_size=300,
+        random_state=12345
+        )
 
     # Retorne `X_train`, `X_test`, `y_train` y `y_test`
     return X_train, X_test, y_train, y_test
@@ -155,9 +160,9 @@ def pregunta_04():
     # Compute el error cuadratico medio de entrenamiento y prueba. Redondee los
     # valores a dos decimales.
 
-    mse_train = mean_squared_error(y_train, y_train_pred,).round(2)
+    mse_train = mean_squared_error(y_train, y_train_pred).round(2)
 
-    mse_test = mean_squared_error(y_test, y_test_pred,).round(2)
+    mse_test = mean_squared_error(y_test, y_test_pred).round(2)
 
     # Retorne el error cuadrático medio para entrenamiento y prueba
     return mse_train, mse_test
